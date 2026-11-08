@@ -176,6 +176,7 @@ html{scroll-behavior:smooth}
     <li><a href="#interaccion">Interacción</a></li>
     <li><a href="#hate">Hate y respuestas</a></li>
     <li><a href="#reglas">Reglas finas</a></li>
+    <li><a href="#flex">Slot flex</a></li>
     <li><a href="#lista">Lista por función</a></li>
   </ol>
 </nav>
@@ -233,7 +234,7 @@ html{scroll-behavior:smooth}
     <div class="piece">
       <div class="top"><h4>Grand Abolisher</h4><span class="cost">{W}{W} · 2/2</span></div>
       <div class="role">Protección</div>
-      <p>En tu turno los oponentes no lanzan hechizos ni activan habilidades de artefactos, criaturas y encantamientos. Si ya está en tu mesa antes de Dack, no se regala y protege todo el combo.</p>
+      <p>En tu turno los oponentes no lanzan hechizos ni activan habilidades de artefactos, criaturas y encantamientos. Si ya está en tu mesa antes de Dack, no se regala y protege todo el combo. Es el slot flex del mazo: ver sección 13.</p>
     </div>
   </div>
 </section>
@@ -651,12 +652,70 @@ html{scroll-behavior:smooth}
   </ul>
 </section>
 
+<section id="flex">
+  <h2><span class="n">13</span>El slot flex</h2>
+  <p>El 99 tiene que tener exactamente tres criaturas además de Dack para que su trigger sea determinista en mesa de 4. Leveler y Thassa's Oracle son obligatorias, así que <strong>la única que se puede cambiar es Grand Abolisher</strong>. La lista de Watanabe juega Abolisher; estas son las alternativas que se están viendo.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Carta</th><th>Costo</th><th>Si Dack la revela</th><th>Si la bajas antes</th></tr></thead>
+    <tbody>
+      <tr><td>Grand Abolisher</td><td>{W}{W}</td><td>Dásela al jugador activo en turno rival: los otros dos no responden.</td><td>Protege todo tu turno de hechizos y habilidades de artefactos, criaturas y encantamientos.</td></tr>
+      <tr><td>Yuriko, Blade of the Mighty</td><td>{3}{W}</td><td>Si combas durante un combate, nadie puede responder a Leveler ni a Thassa, ni siquiera el jugador activo.</td><td>Cada paso de combate de cualquier turno es una ventana sin respuestas para LED + Dack.</td></tr>
+      <tr><td>Teferi, Mage of Zhalfir</td><td>{2}{U}{U}{U}</td><td>Dáselo al rival que menos interactúa: los otros dos quedan a velocidad de conjuro, en cualquier turno.</td><td>Ningún rival puede responder con hechizos. Tus criaturas tienen flash.</td></tr>
+      <tr><td>Samut, Tyrant of Naktamun</td><td>{1}{U}</td><td>No protege nada, y le da split second a los hechizos del rival que la reciba.</td><td>Tus instantáneos y conjuros tienen split second: Entomb, Reanimate, Consultation y Pact no se pueden responder.</td></tr>
+      <tr><td>Superior Spider-Man</td><td>{2}{U}{B}</td><td>No protege nada.</td><td>Un segundo Dack: entra como copia de una criatura de cualquier cementerio.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Yuriko, Blade of the Mighty</h3>
+  <p>{3}{W}, 2/3. <em>Durante el combate, los jugadores no pueden lanzar hechizos ni activar habilidades que no sean de maná.</em> Afecta a todos, incluido quien la controla, y en cualquier turno.</p>
+  <ul>
+    <li><strong>Revelada por Dack:</strong> activa LED en el inicio de combate de cualquier turno. Cuando el token de Dack resuelve, Yuriko entra y desde ese momento nadie puede responder a los triggers de Leveler y Thassa. Bloquea también al jugador activo y a las tierras con channel (Otawara, Boseiju), dos cosas que Abolisher no frena.</li>
+    <li><strong>En tu campo antes:</strong> en combate nadie puede responder a nada, ni al trigger de Hashaton ni al de Dack. LED es habilidad de maná y sí se puede activar: es como tener un split second permanente durante cada combate.</li>
+    <li><strong>Ojo:</strong> en combate tú tampoco puedes lanzar hechizos ni usar The Underworld Cookbook. El único descarte que sirve es LED, y el caso de Thassa en mano no funciona.</li>
+    <li>Todos los turnos tienen inicio de combate, aunque nadie ataque, y en ese paso hay prioridad.</li>
+  </ul>
+
+  <h3>Teferi, Mage of Zhalfir</h3>
+  <p>{2}{U}{U}{U}, 3/4, flash. <em>Las cartas de criatura que posees fuera del campo tienen flash. Cada oponente solo puede lanzar hechizos cuando podría lanzar un conjuro.</em> Eso significa que nadie puede lanzar nada en respuesta.</p>
+  <ul>
+    <li><strong>Revelado por Dack:</strong> el rival que lo recibe queda libre, pero sus oponentes (tú y los otros dos) quedan a velocidad de conjuro. Al revés que Abolisher, dáselo al rival que menos puede interactuar. Funciona en cualquier turno, también el tuyo.</li>
+    <li><strong>En tu campo antes:</strong> ningún rival responde con hechizos (Force of Will, Fierce Guardianship, Stifle) a nada de lo que hagas. Además puedes hard castear Dack en el end step rival, o hacer Leveler + Thassa a velocidad de instantáneo.</li>
+    <li><strong>Contras:</strong> 5 maná con {U}{U}{U}, y no frena habilidades activadas. Si se lo regalas a un rival, tú pierdes el flash y quedas a velocidad de conjuro.</li>
+  </ul>
+
+  <h3>Samut, Tyrant of Naktamun</h3>
+  <p>{1}{U}, 2/1. <em>Los instantáneos y conjuros que controlas tienen split second.</em> Es la más jugada de las cartas nuevas en listas de Hashaton.</p>
+  <ul>
+    <li><strong>Proactiva:</strong> bájala temprano. Entomb, Reanimate, Shallow Grave, Demonic Consultation y Tainted Pact no se pueden contrarrestar.</li>
+    <li><strong>Ventana para LED:</strong> con Samut en mesa, <em>cualquier</em> instantáneo tuyo abre la ventana de la sección 05. Lanzas Brainstorm o Dark Ritual, mantienes prioridad y activas LED descartando a Dack. Todo el combo resuelve encima sin respuesta.</li>
+    <li><strong>Ojo:</strong> protege solo mientras tu hechizo está en el stack. Un Reanimate con split second no se puede contrarrestar, pero el trigger de Dack que viene después sí se puede stiflear. Si Dack la revela, va a un rival y le da split second a sus instantáneos.</li>
+  </ul>
+
+  <h3>Superior Spider-Man</h3>
+  <p>{2}{U}{B}, 4/4. <em>Puede entrar como copia de una carta de criatura de cualquier cementerio, y exilia esa carta.</em> Copia los triggers de "cuando entra".</p>
+  <ul>
+    <li><strong>Segundo Dack:</strong> si te contrarrestaron a Dack, lo tiraste con Entomb o lo descartaste sin pagar el {2}{U}, Spider-Man entra como copia de Dack por 4.</li>
+    <li><strong>Arregla casos rotos:</strong> con Thassa en el cementerio, Leveler vacía tu biblioteca y Spider-Man entra como copia de Thassa. Con Leveler en el cementerio, Spider-Man como Leveler y después Thassa. Puede copiar también la Thassa de un rival.</li>
+    <li><strong>Contras:</strong> es un hechizo de criatura que se puede contrarrestar y depende del cementerio (Rest in Peace, Bojuka Bog). No protege nada.</li>
+  </ul>
+
+  <h3>Cuál elegir</h3>
+  <ul>
+    <li><strong>Grand Abolisher:</strong> barato y simple. Es lo de la lista ganadora.</li>
+    <li><strong>Yuriko:</strong> la mejor protección cuando Dack la revela, si te disciplinas a combar con LED en un paso de combate.</li>
+    <li><strong>Samut:</strong> si juegas mucho la ruta de Entomb + Reanimate o Consultation, o quieres más ventanas de split second.</li>
+    <li><strong>Teferi:</strong> protección más fuerte y en cualquier turno, pero cara. Mejor en mesas lentas.</li>
+    <li><strong>Superior Spider-Man:</strong> en mesas que te contrarrestan o te exilian piezas, donde importa más tener un segundo intento.</li>
+  </ul>
+  <p class="muted">También aparece Fblthp, Impossibly Lost ({1}{U}) en algunas listas. Gana si tu biblioteca está vacía cuando le haces daño de combate a un rival en tu turno: es un respaldo de Thassa después de Leveler, no protección. Los porcentajes de uso salen de EDHREC; el análisis de cada carta es propio.</p>
+</section>
+
 <section id="lista">
-  <h2><span class="n">13</span>La lista por función</h2>
+  <h2><span class="n">14</span>La lista por función</h2>
   <p class="muted">Las 99 cartas del 99 agrupadas por su rol principal. Algunas hacen más de una cosa.</p>
   <div class="decklist">
     <div class="grp"><h4>Comandante</h4><ul><li>Hashaton, Scarab's Fist</li></ul></div>
-    <div class="grp"><h4>Criaturas (4)</h4><ul><li>Dack Fayden, Helping Hand</li><li>Grand Abolisher</li><li>Leveler</li><li>Thassa's Oracle</li></ul></div>
+    <div class="grp"><h4>Criaturas (4)</h4><ul><li>Dack Fayden, Helping Hand</li><li>Grand Abolisher (slot flex)</li><li>Leveler</li><li>Thassa's Oracle</li></ul></div>
     <div class="grp"><h4>Descarte y reanimación (6)</h4><ul><li>Lion's Eye Diamond</li><li>Careful Study</li><li>The Underworld Cookbook</li><li>Reanimate</li><li>Shallow Grave</li><li>Borne Upon a Wind</li></ul></div>
     <div class="grp"><h4>Tutores (15)</h4><ul><li>Demonic Tutor</li><li>Vampiric Tutor</li><li>Imperial Seal</li><li>Grim Tutor</li><li>Mystical Tutor</li><li>Enlightened Tutor</li><li>Entomb</li><li>Intuition</li><li>Lim-Dûl's Vault</li><li>Scheming Symmetry</li><li>Wishclaw Talisman</li><li>Tainted Pact</li><li>Demonic Consultation</li><li>Praetor's Grasp</li><li>Tezzeret, Cruel Captain</li></ul></div>
     <div class="grp"><h4>Fast mana (11)</h4><ul><li>Sol Ring</li><li>Mana Vault</li><li>Arcane Signet</li><li>Fellwar Stone</li><li>Chrome Mox</li><li>Mox Diamond</li><li>Mox Opal</li><li>Mox Amber</li><li>Lotus Petal</li><li>Dark Ritual</li><li>Cabal Ritual</li></ul></div>
